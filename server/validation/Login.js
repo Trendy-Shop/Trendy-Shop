@@ -7,7 +7,7 @@ module.exports =function ValidateLogin(data){
     data.email =!isEmpty (data.email)? data.email : ""
     data.password =!isEmpty (data.password) ? data.password :""
 
-    if(!validator.isEmpty(data.email)){
+    if(!validator.isEmail(data.email)){
     error.email ="Require format email"
     }
     if(validator.isEmpty(data.email)){
