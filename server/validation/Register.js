@@ -1,18 +1,18 @@
-const isEmpty =require('./isEmpty');
+const isEmpty =require ('./isEmpty');
 const validator = require('validator');
 
 
-module.exports(function ValidateRegister(data){
+module.exports=function ValidateRegister(data){
     let error ={}; 
-    data.name =!isEmpty(data.name) ? data.name :""
-    data.email =!isEmpty(data.email) ? data.email: ""
+    data.name = !isEmpty(data.name) ? data.name :""
+    data.email = !isEmpty(data.email) ? data.email: ""
     data.password =!isEmpty(data.password) ? data.password :""
     data.confirm =!isEmpty (data.confirm) ? data.confirm :""
    
     if(validator.isEmpty(data.name)){
         error.name = "require name"
     }
-    if(!validator.isEmpty(data.email)){
+    if(!validator.isEmail(data.email)){
         error.email= "Require format email "
     }
     if(validator.isEmpty(data.email)){
@@ -31,4 +31,4 @@ module.exports(function ValidateRegister(data){
         error ,
         isValid:isEmpty(error)
     }
-})
+}
