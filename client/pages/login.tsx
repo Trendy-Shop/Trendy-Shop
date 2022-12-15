@@ -1,7 +1,9 @@
 import React,{useState} from 'react'
-import { Router } from "next/router";
+import { useRouter } from 'next/router';
 import axios from 'axios'
+// import { Container, Row, Col, Form, Button } from 'next-bootstrap-layout';
 const Login= () => {
+  const router = useRouter();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
@@ -14,12 +16,16 @@ const Login= () => {
         email,
         password,
         
+
       //  await router.push("/")
+
+
       })
+      router.push('/')
       // Handle successful login
     alert(response.data.message)
     console.log(response)
-    } catch (error) {
+    } catch (error){
       console.log(error);
      
     }
