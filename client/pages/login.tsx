@@ -1,9 +1,8 @@
-import React,{useState} from 'react'
-import { useRouter } from 'next/router';
+import React, { useState } from 'react'
+
+import { useRouter } from "next/router";
 import axios from 'axios'
-// import { Container, Row, Col, Form, Button } from 'next-bootstrap-layout';
-const Login= () => {
-  const router = useRouter();
+const Login = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
@@ -16,47 +15,64 @@ const Login= () => {
       const response = await axios.post("http://localhost:5000/user/login", {
         email,
         password,
-        
 
-      //  await router.push("/")
-
-
+        //  await Router.push("/")
       })
+
       if(response.data.role === "ADMIN"){
         return router.push('admin/admin')
       }else {
       router.push('/')
     }
+
       // Handle successful login
-    alert(response.data.message)
-    console.log(response)
-    } catch (error){
+      alert(response.data.message)
+      console.log(response)
+    } catch (error) {
       console.log(error);
-     
+
     }
   }
 
   return (
-    <form onSubmit={handleLogin}>
-      <label>
-        Email:
-        <input
-          type="text"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-      </label>
-      <label>
-        Password:
-        <input
-          type="password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-        />
-      </label>
-      {error && <p>{error}</p>}
-      <button type="submit">Login</button>
-    </form>
+    <div className="col-md-12 row ">
+      <div className="card1 card-container">
+      
+        <form onSubmit={handleLogin}>
+          <div className="form-group">
+            <label>
+              Email:
+              <input
+                type="text"
+                className="form-control"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Password:
+              <input
+                type="password"
+                className="form-control"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+              />
+            </label>
+          </div>
+          {error && <p>{error}</p>}
+          <div className="form-group">
+            <button
+              type="submit"
+              className="btn btn-primary btn-block"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
 

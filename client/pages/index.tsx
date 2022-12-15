@@ -1,10 +1,8 @@
 import React from 'react'
 import Head from "next/head";
-import BootstrapCarousel from "../carousels/Bootstrap";
-
+import BootstrapCarousel from "../public/Bootstrap"
 const HomePage = () => {
   return (
-
     <div>
     <Head>
       <title>TRENDY-SHOP</title>
@@ -15,8 +13,6 @@ const HomePage = () => {
       <BootstrapCarousel />
     </main>
   </div>
-
-
 
   )
 }
