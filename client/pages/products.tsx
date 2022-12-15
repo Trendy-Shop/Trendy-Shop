@@ -1,6 +1,7 @@
 import React from 'react'
 import { Router } from "next/router";
 import {useState} from 'react'
+import axios from 'axios';
 
 export const getStaticProps=async()=>{
   const res=await fetch("http://localhost:5000/prod/prod")
@@ -17,8 +18,12 @@ return {
 
 
 
+
+
 const Products = (props:any) => {
- 
+ const add =(body :any)=>{
+    axios.post("http://localhost:5000/cart/cart",body)
+ }
   console.log(props.Baskets);
 
   console.log(props.Jean);
@@ -53,7 +58,9 @@ console.log(prod);
       <p className="card-text">{e.Description}</p>
       <p className="card-text"><small className="text-muted">{e.Price} $</small></p>
       <br />
-      <button type="button" className="btn btn-secondary"> 🛒 Buy Now</button>
+      <button type="button" className="btn btn-secondary" 
+      onClick={()=>{add({Product:e.Product,Category:e.Category,Description:e.Description,ImageUrl:e.ImageUrl,Price:e.Price })}}> 
+      🛒 Buy Now</button>
 
     </div>
   </div>)})}
