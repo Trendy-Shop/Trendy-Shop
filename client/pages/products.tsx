@@ -16,17 +16,20 @@ const Products = ({products}:any) => {
  
   return (
 
-<div className="card-group">
-  <div className="card">
-    <img src="..." className="card-img-top" alt="..."/>
+<>
+<div className='container px-4 px-lg-5 mt-5'>
+  <div className='row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center'>
+ {products.map((e:any)=> 
+ {return (<div key={e._id} className="card">
+    <img src={e.ImageUrl} className="card-img-top" alt="..."/>
     <div className="card-body">
-      <h5 className="card-title">Card title</h5>
-      <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+      <h5 className="card-title">{e.Product}</h5>
+      <p className="card-text">{e.Description}</p>
+      <p className="card-text"><small className="text-muted">{e.Price}</small></p>
     </div>
-  </div>
- 
-</div>
+  </div>)})}
+ </div></div>
+  </>
   )
 }
 
