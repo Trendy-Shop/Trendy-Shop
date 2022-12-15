@@ -33,6 +33,7 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@types/bootstrap": "^5.2.6",
     "@types/react-scroll": "^1.8.5"
   }
 }

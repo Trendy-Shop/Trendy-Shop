@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from "next/head";
-import BootstrapCarousel from "../carousels/Bootstrap";
-
+import BootstrapCarousel from "../public/Bootstrap"
 const HomePage = () => {
   return (
     <div>
