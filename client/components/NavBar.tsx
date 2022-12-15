@@ -1,8 +1,17 @@
-import React from 'react'
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { userAgent } from 'next/server';
 
 const NavBar = () => {
+  const [userIsAuthenticated, setUserIsAuthenticated] = useState(false);
+  // Check if the user is authenticated
+  useEffect(() => {
+    if (userIsAuthenticated) {
+      setUserIsAuthenticated(true);
+    }
+  }, []);
+
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
       <img src="http://res.cloudinary.com/dqz0n291c/image/upload/c_scale,h_70,w_100/v1671042018/trendy_cairap.png" alt="" />
@@ -21,9 +30,13 @@ const NavBar = () => {
         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
       </form>
       <div className="navbar-nav" style={{ height: "60%", width: "20%", marginLeft: "10%" }} >
-        <a className="nav-item nav-link " href="/login" ><h4>Login</h4> </a>
-        <a className="nav-item nav-link " href="/login" ><h4>Signup</h4> </a>
-        <a className="nav-item nav-link " href="/login" ><h4>Logout</h4> </a>
+        {/* {userAgent.role} */}
+        {!userIsAuthenticated && (
+        <a className="nav-item nav-link " href="/login" ><h4>Login</h4> </a> )}
+        <a className="nav-item nav-link " href="/signup" ><h4>Signup</h4> </a>
+         
+        {!userIsAuthenticated &&(
+        <a className="nav-item nav-link " href="/login" ><h4>Logout</h4> </a>)}
       </div>
     </nav>
   )
