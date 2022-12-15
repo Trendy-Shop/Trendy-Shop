@@ -37,7 +37,7 @@ function Signup() {
     >
       {(formikProps: FormikProps<FormData>) => (
         <div className="col-md-12 row ">
-          <div className="card card-container">
+          <div className="card1 card-container">
             <Form>
               <div className="form-group ">
                 <Field name="name" className="form-control" type="name" placeholder="name" />

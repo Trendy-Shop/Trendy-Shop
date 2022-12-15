@@ -12,8 +12,8 @@ const NavBar = () => {
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav"  >
           <a style={{ marginLeft: '30%' }} className="nav-item nav-link " href="/" ><h4>Home</h4> </a>
-          <a style={{ marginLeft: '30%' }} className="nav-item nav-link" href="products"><h4>Products</h4></a>
-          <a style={{ marginLeft: '30%' }} className="nav-item nav-link" href="#"><h4>Profil</h4></a>
+          <a style={{ marginLeft: '30%' }} className="nav-item nav-link" href="/products"><h4>Products</h4></a>
+          <a style={{ marginLeft: '30%' }} className="nav-item nav-link" href="/cart"><h4>Cart</h4></a>
 
         </div>
       </div>
@@ -22,8 +22,8 @@ const NavBar = () => {
       </form>
       <div className="navbar-nav" style={{ height: "60%", width: "20%", marginLeft: "10%" }} >
         <a className="nav-item nav-link " href="/login" ><h4>Login</h4> </a>
-
-
+        <a className="nav-item nav-link " href="/login" ><h4>Signup</h4> </a>
+        <a className="nav-item nav-link " href="/login" ><h4>Logout</h4> </a>
       </div>
     </nav>
   )

@@ -29,7 +29,7 @@ const Login = () => {
 
   return (
     <div className="col-md-12 row ">
-      <div className="card card-container">
+      <div className="card1 card-container">
       
         <form onSubmit={handleLogin}>
           <div className="form-group">
