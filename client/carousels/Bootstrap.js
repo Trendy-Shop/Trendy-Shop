@@ -10,6 +10,8 @@ export default function BootstrapCarousel() {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+  const [data,setData] = useState([]);
+  
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {bootstrap.map((item) => (
