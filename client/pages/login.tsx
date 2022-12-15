@@ -14,7 +14,7 @@ const Login= () => {
         email,
         password,
         
-      //  await Router.push("/")
+      //  await router.push("/")
       })
       // Handle successful login
     alert(response.data.message)
