@@ -4,7 +4,6 @@ import BootstrapCarousel from "../carousels/Bootstrap";
 
 const HomePage = () => {
   return (
-
     <div>
     <Head>
       <title>TRENDY-SHOP</title>
@@ -15,8 +14,6 @@ const HomePage = () => {
       <BootstrapCarousel />
     </main>
   </div>
-
-
 
   )
 }
