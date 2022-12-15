@@ -1,11 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-
-export default function Home() {
+import React from 'react'
+  
+const HomePage = () => {
   return (
-    <div className={styles.container}>
-    <h1>hello </h1>
-    </div>
+    <div>Hello Geeks!</div>
   )
 }
+  
+export default HomePage
