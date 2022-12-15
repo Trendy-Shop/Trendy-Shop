@@ -16,6 +16,10 @@ const Login= () => {
         email,
         password,
         
+
+      //  await router.push("/")
+
+
       })
       router.push('/')
       // Handle successful login

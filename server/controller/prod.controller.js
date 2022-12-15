@@ -22,6 +22,12 @@ exports.retrieveOne = function (req, res) {
     })
 
 };
+exports.retrieveOneByCategory = function(req, res){
+    Product.findOne({Category:req.params.Category},(err,Res)=>{
+        if(err) console.log(err)
+        else {res.json(Res)};
+    })
+}
 
 exports.updateOne = function (req, res) {
     Product.findOneAndUpdate({id:req.params.id},req.body)
