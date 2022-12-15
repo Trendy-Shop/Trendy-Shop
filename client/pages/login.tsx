@@ -8,6 +8,7 @@ const Login= () => {
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
 
+   
   async function handleLogin(event: React.FormEvent) {
     event.preventDefault();
 
@@ -21,7 +22,11 @@ const Login= () => {
 
 
       })
+      if(response.data.role === "ADMIN"){
+        return router.push('admin/admin')
+      }else {
       router.push('/')
+    }
       // Handle successful login
     alert(response.data.message)
     console.log(response)
