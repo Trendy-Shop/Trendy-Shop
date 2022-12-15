@@ -7,8 +7,8 @@ productRouter.route('/prod')
 .get(productController.retrieve)
 .post(productController.createOne)
 
-// productRouter.route('/Category')
-// .get(productController.retrieveOneByCategory)
+productRouter.route("/Category")
+.get(productController.retrieveOneByCategory)
 
 productRouter.route('/:id')
 .get(productController.retrieveOne)

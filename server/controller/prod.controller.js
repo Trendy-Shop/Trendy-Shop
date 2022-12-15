@@ -16,21 +16,21 @@ exports.retrieve = function (req, res) {
 };
 
 exports.retrieveOne = function (req, res) {
-    Product.findOne({id:req.params.id},(err,Res)=>{
+    Product.findOne({_id:req.params.id},(err,Res)=>{
         if(err) console.log(err)
         else {res.json(Res)};
     })
 
 };
-// exports.retrieveOneByCategory = function(req, res){
-//     Product.findOne({Category:req.params.Category},(err,Res)=>{
-//         if(err) console.log(err)
-//         else {res.json(Res)};
-//     })
-// }
+exports.retrieveOneByCategory = function(req, res){
+    Product.findOne({Category:req.params.Category},(err,Res)=>{
+        if(err) console.log(err)
+        else {res.json(Res)};
+    })
+}
 
 exports.updateOne = function (req, res) {
-    Product.findOneAndUpdate({id:req.params.id},req.body)
+    Product.findOneAndUpdate({_id:req.params.id},req.body)
     .then((result)=>{res.send(result)})
 
 .catch((err)=>console.log(err))
