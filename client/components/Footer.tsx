@@ -7,7 +7,10 @@ const Footer = () => {
 
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div className="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
+          <span>Get connected with us on social networks: </span>
+          <a href="/login" className="me-4 text-reset">
+            <i >Create an acount</i>
+          </a>
         </div>
         <div>
           <a href="" className="me-4 text-reset">
@@ -46,9 +49,10 @@ const Footer = () => {
     
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">
-                Products
+                contact 
               </h6>
               <p>
+
                 <a href="#!" className="text-reset">All-prodects</a>
               </p>
               <p>
@@ -59,6 +63,9 @@ const Footer = () => {
               </p>
               <p>
                 <a href="#!" className="text-reset">T-shirt</a>
+
+              
+
               </p>
             </div>
     

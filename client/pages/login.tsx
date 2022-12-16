@@ -6,13 +6,14 @@ const Login = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const [error, setError] = useState("");
- const router = useRouter()
+   
+
  console.log('====================================');
 //  console.log(error);
  console.log('====================================');
 
  
+
 
   async function handleLogin(event: React.FormEvent) {
     event.preventDefault();
