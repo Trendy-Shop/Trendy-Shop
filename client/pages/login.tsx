@@ -12,8 +12,7 @@ const Login = () => {
 //  console.log(error);
  console.log('====================================');
 
-  const [error, setError] = useState<string>("");
-  const router = useRouter()
+ 
 
 
   async function handleLogin(event: React.FormEvent) {

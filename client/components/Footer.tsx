@@ -39,7 +39,7 @@ const Footer = () => {
           <div className="row mt-3">
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">
-                <i className="fas fa-gem me-3"></i>Company name
+                <i className="fas fa-gem me-3"></i>Company name  Trendy-Shop
               </h6>
               <p>
                 Here you can use rows and columns to organize your footer content. Lorem ipsum
@@ -52,16 +52,20 @@ const Footer = () => {
                 contact 
               </h6>
               <p>
-                <a href="#!" className="text-reset">Facebook</a>
+
+                <a href="#!" className="text-reset">All-prodects</a>
               </p>
               <p>
-                <a href="#!" className="text-reset">Instagram</a>
+                <a href="#!" className="text-reset">shoes</a>
               </p>
               <p>
-                <a href="#!" className="text-reset">Twitter</a>
+                <a href="#!" className="text-reset">pants</a>
               </p>
               <p>
-                <a href="#!" className="text-reset">Linkedin</a>
+                <a href="#!" className="text-reset">T-shirt</a>
+
+              
+
               </p>
             </div>
     
@@ -88,10 +92,10 @@ const Footer = () => {
               <p><i className="fas fa-home me-3"></i> New York, NY 10012, US</p>
               <p>
                 <i className="fas fa-envelope me-3"></i>
-                info@example.com
+                https://github.com/Ahmedhenchiri
               </p>
-              <p><i className="fas fa-phone me-3"></i> + 01 234 567 88</p>
-              <p><i className="fas fa-print me-3"></i> + 01 234 567 89</p>
+              <p><i className="fas fa-phone me-3"></i>  https://github.com/abderrahim-ouertani</p>
+              <p><i className="fas fa-print me-3"></i>  https://github.com/AhmedTrifi</p>
             </div>
           </div>
         </div>
@@ -100,8 +104,8 @@ const Footer = () => {
     
       
       <div className="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}>
-        © 2021 Copyright:
-        <a className="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        © 2022 Copyright:
+        <a className="text-reset fw-bold" href="https://mdbootstrap.com/">Trendy-Shop</a>
       </div>
       
     </footer>
