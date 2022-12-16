@@ -20,12 +20,14 @@ export default function BootstrapCarousel() {
           <Carousel.Caption className={styles.caption}>
             <h3>{item.title}</h3>
             <p>{item.body}</p>
+
             <button
               className="btn btn-secondary"
               onClick={() => (window.location.href = '/products')}
             >
               Visit Products
             </button>
+
           </Carousel.Caption>
         </Carousel.Item>
       ))}
