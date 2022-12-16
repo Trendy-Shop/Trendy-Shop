@@ -18,7 +18,7 @@ function Signup() {
       const response = await axios.post('http://localhost:5000/user/register', values);
 
       // Handle success or failure
-      router.push('/login');
+      router.push('/');
       alert(response.data.message)
     }
 
