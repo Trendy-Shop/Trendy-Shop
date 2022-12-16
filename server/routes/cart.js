@@ -5,6 +5,7 @@ var cartController = require('../controller/cart.controller');
 cartRouter.route('/cart')
 .get(cartController.retrieve)
 .post(cartController.createOne)
+.delete(cartController.deleteAll)
 
 
 
